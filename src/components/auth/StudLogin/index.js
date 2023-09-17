@@ -79,19 +79,13 @@ const StudLogin = () => {
             <div className="login__block-btn">
               <p style={{ width: "300px" }}>
                 У вас нет учетной записи?{" "}
-                <Link to={"/studRegistr"}>
+                <Link to={"/registr"}>
                   <span>Создайте учетную запись!</span>
                 </Link>
               </p>
-              <Link to={"/forgatPassStud"} style={{ width: "180px" }}>
-                <h4>Забыли пароль?</h4>
-              </Link>
             </div>
             <div className="login__block-button">
               <button onClick={handleLogin}>Войти</button>
-              <Link to={"/repLogin"}>
-                <button className="btn">Я не студент!</button>
-              </Link>
             </div>
             <span>или</span>
             <div className="login__block-icon">

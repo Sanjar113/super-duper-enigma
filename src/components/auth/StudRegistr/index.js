@@ -64,7 +64,7 @@ const StudRegistr = () => {
 
   return (
     <div id="studRegister">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="studRegister">
           <div className="studRegister__block">
             <h1>Регистрация для студента</h1>
@@ -127,20 +127,14 @@ const StudRegistr = () => {
             <div className="studRegister__block-btn">
               <p style={{ width: "300px" }}>
                 У вас уже есть учетная запись?
-                <Link to={"/studLogin"}>
+                <Link to={"/login"}>
                   <span>Войти!</span>
                 </Link>
               </p>
-              <Link style={{ width: "180px" }} to={"/forgatPassStud"}>
-                <h4>Забыли пароль?</h4>
-              </Link>
             </div>
             <div className="studRegister__block-button">
               <Link onClick={handleSubmit}>
                 <button>Зарегистрироваться</button>
-              </Link>
-              <Link to={"/repRegistr"}>
-                <button className="btn">Я не студент!</button>
               </Link>
             </div>
             <div
