@@ -11,7 +11,7 @@ export const Map = () => {
 
     const [show, setShow] = useState(false)
     const center = [40.878134, 74.975752];
-    const circleCenter = [42.84619, 74.58617];
+    const circleCenter = [42.84620, 74.58617];
 
 
     const data = [
