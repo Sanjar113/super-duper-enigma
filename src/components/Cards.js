@@ -118,7 +118,7 @@ export const Cards = () => {
         },
     ]
     return (
-        <div className="w-full h-[100vh] p-[50px] shadow-lg shadow-[#a9a8a8]">
+        <div className="w-full h-[100vh] p-[50px]">
             <div className="loadbar" style={{ width: `${loadingProgress}%` }}></div>
             <div id="slide" ref={slideRef}>
                 {data.map((item) => (
