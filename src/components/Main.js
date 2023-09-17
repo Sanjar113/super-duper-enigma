@@ -8,6 +8,8 @@ import { Tours } from './Tours'
 import { Hotels } from './Hotels'
 import { Map } from './Map'
 import { Flight } from './Flight'
+import StudLogin from './auth/StudLogin'
+import StudRegistr from './auth/StudRegistr'
 
 const Mainrow = () => {
     return (
@@ -19,17 +21,19 @@ const Mainrow = () => {
 
 export const Main = () => {
     return (
-        <div>
-            <Routes>
-                <Route path='/' element={<Mainrow />} />
-                <Route path='about' element={<About />} />
-                <Route path='where' element={<Where />} />
-                <Route path='tours' element={<Tours />} />
-                <Route path='gallery' element={<Gallery />} />
-                <Route path='hotels' element={<Hotels />} />
-                <Route path='flights' element={<Flight />} />
-                <Route path='map' element={<Map />} />
-            </Routes>
-        </div>
-    )
+      <div>
+        <Routes>
+          <Route path="/" element={<Mainrow />} />
+          <Route path="about" element={<About />} />
+          <Route path="where" element={<Where />} />
+          <Route path="tours" element={<Tours />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="hotels" element={<Hotels />} />
+          <Route path="flights" element={<Flight />} />
+          <Route path="map" element={<Map />} />
+          <Route path="/login" element={<StudLogin />} />
+          <Route path="/registr" element={<StudRegistr />} />
+        </Routes>
+      </div>
+    );
 }
