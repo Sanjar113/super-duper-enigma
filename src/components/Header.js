@@ -3,6 +3,8 @@ import { BiLogoInstagram } from "react-icons/bi"
 import { FaFacebookF } from "react-icons/fa"
 import { AiFillYoutube } from "react-icons/ai"
 import { FiSearch } from "react-icons/fi"
+import { Link } from 'react-router-dom'
+import Logo from "../images/logo.png"
 
 const Header = () => {
 
@@ -31,30 +33,32 @@ const Header = () => {
         </div>
         <div id='head' className='w-full h-full sticky top-0 py-3 text-[15px] font-medium text-[#202020]'>
           <div className='w-[80%] m-auto flex justify-between items-center'>
-            <div>
-              <img src="" alt="" />
+            <div className='flex items-start'>
+              <Link to="/">
+                <img src={Logo} className='w-[50px] cursor-pointer' />
+              </Link>
               <ul className='uppercase flex gap-8'>
-                <a href="about">
+                <Link to="about">
                   <li className='cursor-pointer hover:text-orange-600 transition-colors'>О нас</li>
-                </a>
-                <a href="where">
+                </Link>
+                <Link to="where">
                   <li className='cursor-pointer hover:text-orange-600 transition-colors'>Куда поехать</li>
-                </a>
-                <a href="tours">
+                </Link>
+                <Link to="tours">
                   <li className='cursor-pointer hover:text-orange-600 transition-colors'>Туры</li>
-                </a>
-                <a href="gallery">
+                </Link>
+                <Link to="gallery">
                   <li className='cursor-pointer hover:text-orange-600 transition-colors'>Галерея</li>
-                </a>
-                <a href="hotels">
+                </Link>
+                <Link to="hotels">
                   <li className='cursor-pointer hover:text-orange-600 transition-colors'>Отели</li>
-                </a>
-                <a href="flights">
+                </Link>
+                <Link to="flights">
                   <li className='cursor-pointer hover:text-orange-600 transition-colors'>Рейсы</li>
-                </a>
-                <a href="map">
+                </Link>
+                <Link to="map">
                   <li className='cursor-pointer hover:text-orange-600 transition-colors'>карта</li>
-                </a>
+                </Link>
               </ul>
             </div>
             <div className='flex bg-gray-200 px-2 py-1 items-center'>

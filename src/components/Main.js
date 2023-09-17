@@ -20,18 +20,16 @@ const Mainrow = () => {
 export const Main = () => {
     return (
         <div>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Mainrow />} />
-                    <Route path='about' element={<About />} />
-                    <Route path='where' element={<Where />} />
-                    <Route path='tours' element={<Tours />} />
-                    <Route path='gallery' element={<Gallery />} />
-                    <Route path='hotels' element={<Hotels />} />
-                    <Route path='flights' element={<Flight />} />
-                    <Route path='map' element={<Map />} />
-                </Routes>
-            </BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Mainrow />} />
+                <Route path='about' element={<About />} />
+                <Route path='where' element={<Where />} />
+                <Route path='tours' element={<Tours />} />
+                <Route path='gallery' element={<Gallery />} />
+                <Route path='hotels' element={<Hotels />} />
+                <Route path='flights' element={<Flight />} />
+                <Route path='map' element={<Map />} />
+            </Routes>
         </div>
     )
 }
