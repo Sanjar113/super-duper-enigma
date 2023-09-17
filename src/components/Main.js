@@ -36,4 +36,4 @@ export const Main = () => {
         </Routes>
       </div>
     );
-}
+};

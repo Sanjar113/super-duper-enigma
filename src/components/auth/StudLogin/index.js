@@ -36,8 +36,8 @@ const StudLogin = () => {
   };
   return (
     <div id="login">
-      <div className="container">
-        <div className="login">
+      <div className="w-[100%]">
+        <div className="login w-[80%] mx-auto">
           <div className="login__block">
             <h1>Вход для студента</h1>
             <div className="login__block-input">
