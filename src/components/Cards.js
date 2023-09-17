@@ -117,6 +117,7 @@ export const Cards = () => {
             name: "EXPLORE NATURE",
         },
     ]
+
     return (
         <div className="w-full h-[100vh] p-[50px]">
             <div className="loadbar" style={{ width: `${loadingProgress}%` }}></div>
