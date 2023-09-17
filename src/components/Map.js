@@ -3,7 +3,8 @@ import { MapContainer, TileLayer, Circle, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import Icon from "../images/icon.png"
 import KaraKoi from "../images/Karakoi.jpeg"
-import { BiSolidCaretRightSquare } from "react-icons/bi"
+import { BiSolidCaretRightSquare, BiSolidCaretLeftSquare } from "react-icons/bi"
+// import { BiSolidCaretLeftSquare }
 
 export const Map = () => {
 
@@ -53,7 +54,7 @@ export const Map = () => {
 
     return (
         <div className='relative'>
-            <div className={`${show} ?  w-[245px] h-full bg-white absolute top-0 left-0 z-10`}>
+            <div className={`${show ? 'left-0' : 'left-[-100%]'} transition-[1s] w-[245px] h-full bg-white absolute top-0 z-10`}>
                 Hello
             </div>
             <div className='absolute top-4 left-4 w-max z-10 flex gap-[3px] items-center '>
@@ -61,7 +62,11 @@ export const Map = () => {
                     <input placeholder='Поиск' className='bg-transparent p-1' />
                 </div>
                 <span className=''>
-                    <BiSolidCaretRightSquare className='text-[25px] cursor-pointer text text-[#242424]' onClick={() => setShow(true)} />
+                    {show ? (
+                        <BiSolidCaretLeftSquare className='text-[25px] cursor-pointer text text-[#242424]' onClick={() => setShow(false)} />
+                    ) : (
+                        <BiSolidCaretRightSquare className='text-[25px] cursor-pointer text text-[#242424]' onClick={() => setShow(true)} />
+                    )}
                 </span>
             </div>
             <MapContainer zoomControl={false} center={center} zoom={7} style={{ width: '100%', height: '100vh' }}>
