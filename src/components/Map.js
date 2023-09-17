@@ -4,10 +4,14 @@ import L from 'leaflet';
 import Icon from "../images/icon.png"
 import KaraKoi from "../images/Karakoi.jpeg"
 import { BiSolidCaretRightSquare, BiSolidCaretLeftSquare } from "react-icons/bi"
-// import { BiSolidCaretLeftSquare }
+import Arslanbap from "../images/arstanbap.jpg"
+import Abshyr from "../images/abshyrata.jpg"
+import Oguz from "../images/7.jpg"
+import KaraShoro from "../images/kara_shoro.jpg"
+
+
 
 export const Map = () => {
-
 
     const [show, setShow] = useState(false)
     const center = [40.878134, 74.975752];
@@ -20,28 +24,35 @@ export const Map = () => {
             title: "Каракол",
             des: "Кыргызстан. Горнолыжная база на Иссык-Куле. ",
             img: KaraKoi,
-            position: [42.84619, 74.58617],
+            position: [42.491144, 78.399568],
         },
         {
-            id: 1,
-            title: "Каракол",
-            des: "Кыргызстан. Горнолыжная база на Иссык-Куле. ",
-            img: KaraKoi,
-            position: [42.84619, 74.58617],
+            id: 2,
+            title: "Арсланбап",
+            des: "село Арсланбап, Базар-Коргонский район, Джалал-Абадская область ",
+            img: Arslanbap,
+            position: [41.337784, 72.926142],
         },
         {
-            id: 1,
-            title: "Каракол",
+            id: 3,
+            title: "Абшыр-Ата",
             des: "Кыргызстан. Горнолыжная база на Иссык-Куле. ",
-            img: KaraKoi,
-            position: [42.84619, 74.58617],
+            img: Abshyr,
+            position: [40.162264, 72.363174],
         },
         {
-            id: 1,
-            title: "Каракол",
-            des: "Кыргызстан. Горнолыжная база на Иссык-Куле. ",
-            img: KaraKoi,
-            position: [42.84619, 74.58617],
+            id: 4,
+            title: "Джети-Огуз",
+            des: "",
+            img: Oguz,
+            position: [42.330913, 78.238506],
+        },
+        {
+            id: 5,
+            title: "Кара-Шоро",
+            des: "Кара-Шоро, Алайский район, Ошская область",
+            img: KaraShoro,
+            position: [40.341445, 73.387202],
         }
     ]
 
@@ -78,9 +89,11 @@ export const Map = () => {
                 {data.map((item, index) => {
                     return (
                         <Marker position={item.position} icon={customMarker}>
-                            <Popup>
-                                <div>{item.title}</div>
-                                <img src={item.img} />
+                            <Popup className=''>
+                                <div className='flex flex-col w-full  h-full'>
+                                    <img className='w-[200px]' src={item.img} />
+                                    <p className='text-[20px]'>{item.title}</p>
+                                </div>
                             </Popup>
                         </Marker>
                     )
