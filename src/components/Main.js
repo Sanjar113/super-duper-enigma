@@ -1,6 +1,6 @@
 import React from 'react'
 import { Cards } from './Cards'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { About } from './About'
 import { Gallery } from './Gallery'
 import { Where } from './Where'
